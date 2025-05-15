@@ -1,0 +1,18 @@
+{% extends "reuse/base.html" %} 
+{% block content %}
+<div>
+    <h2>Открытие кейса</h2>
+    <button id="open-case-btn" class="btn btn-primary">Открыть кейс</button>
+    <div id="user-balance" style="margin-top: 10px; font-weight: bold;"></div>
+    <div id="selected-item" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;"></div>
+    <div id="case-items" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px; max-height: 300px; overflow-y: auto;"></div>
+</div>
+
+<script src="{{ url_for('static', filename='case_new.js') }}"></script>
+<script>
+    document.getElementById('open-case-btn').addEventListener('click', function() {
+        const caseType = Number("{{ n }}");
+        openCase(caseType);
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,268 @@
+{% extends "reuse/base.html" %} {% block content %}
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h1 class="h2">Предложить новый улов</h1>
+      <p class="lead">
+        Каждый фарм-монстр может повлиять на проект, предлагая разработчикам
+        новые идеи, сделайте это прямо сейчас!
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Наши соц. сети</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Наш телеграмм</h6>
+              <small class="text-body-secondary">telegram-url</small>
+            </div>
+            <span class="text-body-secondary">tg-img</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Наш телеграмм-бот</h6>
+              <small class="text-body-secondary">tgbot-url</small>
+            </div>
+            <span class="text-body-secondary">tg-img</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Наш ВК</h6>
+              <small class="text-body-secondary">vk-url</small>
+            </div>
+            <span class="text-body-secondary">vk-img</span>
+          </li>
+        </ul>
+
+        <div
+          class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary"
+          style="width: 380px"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom"
+          >
+            <svg
+              class="bi pe-none me-2"
+              width="30"
+              height="24"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="fs-5 fw-semibold">Последние новости</span>
+          </a>
+          <div class="list-group list-group-flush border-bottom scrollarea">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action active py-3 lh-sm"
+              aria-current="true"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">Проект доработан до конца</strong>
+                <small>Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Проект готов к полноценной работе
+              </div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">ИхтиоБет теперь на хостинге</strong>
+                <small class="text-body-secondary">Tues</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                ИхтиоБет хоститься на pythonanywhere
+              </div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">Проект успешно защищён</strong>
+                <small class="text-body-secondary">Mon</small>
+              </div>
+              <div class="col-10 mb-1 small">
+                Мы провели защиту проекта в яндекс-лицее, вроде всем понравилось
+              </div>
+            </a>
+
+            <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+              aria-current="true"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">У нас появился телеграмм-канал</strong>
+                <small class="text-body-secondary">Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">Ссылка - tg-url</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">У нас появился телеграмм-бот</strong>
+                <small class="text-body-secondary">Tues</small>
+              </div>
+              <div class="col-10 mb-1 small">Ссылка - tgbot-url</div>
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">У нас появилась группа в ВК</strong>
+                <small class="text-body-secondary">Mon</small>
+              </div>
+              <div class="col-10 mb-1 small">Ссылка - vk-url</div>
+            </a>
+
+            <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+              aria-current="true"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">Слиты секретные коды на пополнение</strong>
+                <small class="text-body-secondary">Wed</small>
+              </div>
+              <div class="col-10 mb-1 small">Смотрите у нас в тг-канале!</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Форма нового предмета</h4>
+        <form class="needs-validation" method="post">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="rname" class="form-label">Русское название</label>
+              <input
+                type="text"
+                class="form-control"
+                id="rname"
+                name="rname"
+                placeholder=""
+                value=""
+                required=""
+              />
+              <div class="invalid-feedback">Valid first name is required.</div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="name" class="form-label">Английское название</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder=""
+                value=""
+                required=""
+              />
+              <div class="invalid-feedback">Valid last name is required.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Ваш Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="cost" class="form-label">Цена за 100 грамм</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cost"
+                name="cost"
+                required=""
+              />
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="rarity" class="form-label"
+                >Редкость
+                <span class="text-body-secondary"
+                  >(simple, rare, superrare, epic, mythical, legendary,
+                  precious)</span
+                ></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="rarity"
+                name="rarity"
+              />
+            </div>
+
+            <div class="col-12">
+              <label for="history" class="form-label">История предмета </label>
+              <input
+                type="text"
+                class="form-control"
+                id="history"
+                name="history"
+              />
+            </div>
+
+            <div class="col-12">
+              <label for="history_user" class="form-label"
+                >История задумки
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                id="history_user"
+                name="history_user"
+              />
+            </div>
+
+            <hr class="my-4" />
+            <button class="w-100 btn btn-primary btn-lg" type="submit">
+              Предложить
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  {% endblock %}
+</div>

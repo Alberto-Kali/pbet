@@ -1,0 +1,96 @@
+body {
+	background-color: #141414;
+}
+
+.desc {
+	width: 80%;
+	position: center;
+}
+
+.desc1 {
+	display: flex;
+	justify-content: center;
+}
+
+.inventory {
+    display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.onother {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.butcon {
+    height: 16%;
+    width: 16%;
+    margin-left: 30%;
+    margin-right: 2%;
+    margin-top: 7%;
+    z-index: 5000;
+}
+
+.inventorys {
+    height: 16%;
+    width: 16%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 7%;
+    z-index: 5000;
+}
+
+.rarity {
+    display: flex;
+    justify-content: center;
+    white-space: pre-line;
+}
+
+.inventory1 {
+    display: flex;
+	transition: all 4s;
+	justify-content: center;
+}
+
+.inventorys1 {
+    height: 200px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+	justify-content: center;
+	margin-top: 28%;
+	z-index: -1;
+}
+
+.vector {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 25%;
+    margin-bottom: 5%;
+}
+
+.vectortext {
+    width: 10px;
+    color: white;
+}
+
+.sep {
+    color: grey;
+}

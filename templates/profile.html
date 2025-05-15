@@ -1,0 +1,101 @@
+{% extends "reuse/base.html" %} {% block content %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <h1 class="display-4 fw-normal text-body-emphasis">
+    <font color="white">{{ user.name }}</font>
+  </h1>
+  <pre
+    class="fs-5 text-body-secondary"
+  ><font color="white">Это твой фарм-аккаунт, смотри чтобы твой улов не сбежал!
+      А так можешь просто любоваться своей коллекцией(если она конечно есть) и большим балансом!</font></pre>
+</div>
+<div class="desc1">
+  <div class="desc">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Никнейм</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              {{ user.name }}<small class="text-body-secondary fw-light">
+                фармер</small
+              >
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Один единственный</li>
+              <li>Запомните это имя, скоро оно станет великим</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Почта</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              {{ user.email }}<small class="text-body-secondary fw-light">
+                лучше не связываться</small
+              >
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Писать только в экстренных случаях</li>
+              <li>Наверное придумана ещё с детства</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Баланс</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              {{ user.balance }}<small class="text-body-secondary fw-light">
+                бро, полегче</small
+              >
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Потом и кровью...</li>
+              <li>Обьект оценки положения в обществе</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <h3 class="display-4 fw-normal text-body-emphasis">
+    <font color="white">Инвентарь</font>
+  </h3>
+</div>
+<div class="inventory">
+  {% for i in inventory %}
+  <div class="inventorys">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <div class="rarity">
+            <h4 class="my-0 fw-normal">{{ i[0] }}</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="rarity">
+            <h1 class="card-title pricing-card-title">Цена: {{ i[1] }}</h1>
+          </div>
+          <ul class="list-unstyled mt-3 mb-4">
+            <div class="rarity">
+              <li>Ценность: {{ i[2] }}<br />Вес: {{ i[4] }}</li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

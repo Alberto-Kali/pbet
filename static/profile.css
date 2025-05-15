@@ -1,0 +1,52 @@
+body {
+	background-color: #141414;
+}
+
+.desc {
+	width: 80%;
+	position: center;
+}
+
+.desc1 {
+	display: flex;
+	justify-content: center;
+}
+
+.inventory {
+    display: flex;
+	flex-wrap: wrap;
+}
+
+.inventorys {
+    height: 16%;
+    width: 16%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1.5%;
+}
+
+.rarity {
+    display: flex;
+    justify-content: center;
+    white-space: pre-line;
+}
+
+.inventory1 {
+    display: flex;
+	transition: all 4s;
+	justify-content: center;
+}
+
+.inventorys1 {
+    height: 16%;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+	justify-content: center;
+}

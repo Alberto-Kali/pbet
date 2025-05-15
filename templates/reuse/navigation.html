@@ -1,0 +1,68 @@
+<!-- templates/components/nav.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary-gradient shadow">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index.index') }}">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="ИхтиоБет" height="40" class="me-2">
+            <span class="fw-bold">ИхтиоБет</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if request.endpoint == '' }}" href="{{ url_for('index.index') }}">
+                        <i class="bi bi-house-door"></i> Главная
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="collectionDropdown" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-collection"></i> Коллекция
+                    </a>
+                    <ul class="dropdown-menu bg-dark-blue">
+                        <li><a class="dropdown-item text-light" href="{{ url_for('auth.page_coll') }}">Страница коллекции</a></li>
+                        <li><a class="dropdown-item text-light" href="{{ url_for('auth.page_coll') }}">JSON данные</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if request.endpoint == 'promo' }}" href="{{ url_for('payments.promo') }}">
+                        <i class="bi bi-wallet2"></i> Пополнение счёта
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if request.endpoint == 'profile' }}" href="{{ url_for('auth.profile') }}">
+                        <i class="bi bi-person"></i> Профиль
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ 'active' if request.endpoint == 'community' }}" href="{{ url_for('community.community') }}">
+                        <i class="bi bi-people"></i> Комьюнити
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="d-flex align-items-center">
+                {% if not user %}
+                    <a class="btn btn-outline-light me-2" href="{{ url_for('auth.login_user') }}">
+                        <i class="bi bi-box-arrow-in-right"></i> Вход
+                    </a>
+                    <a class="btn btn-warning" href="{{ url_for('auth.register_user') }}">
+                        <i class="bi bi-person-plus"></i> Регистрация
+                    </a>
+                {% else %}
+                    <div class="d-flex align-items-center me-3">
+                        <span class="badge bg-info text-dark me-2 fs-6">
+                            {{ user.balance }} <i class="bi bi-coin"></i>
+                        </span>
+                        <span class="fw-bold">{{ user.name }}</span>
+                    </div>
+                    <a class="btn btn-outline-danger ms-2" href="{{ url_for('auth.logout') }}">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

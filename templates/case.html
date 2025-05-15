@@ -1,0 +1,107 @@
+{% extends "reuse/base.html" %} {% block content %}
+    <div class="inventory">
+      <div class="onother"></div>
+      <div class="inventorys">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <div class="rarity">
+                <h4 class="my-0 fw-normal">{{ i[0] }}</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="rarity">
+                <h1 class="card-title pricing-card-title">
+                  Цена: {{ i[1] }} Вес: {{ i[3] }}
+                </h1>
+              </div>
+              <ul class="list-unstyled mt-3 mb-4">
+                <div class="rarity">
+                  <li>{{ i[2] }}</li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="butcon">
+          <a href="/" class="btn btn-lg btn-light fw-bold border-black bg-grey"
+            >ЗАБРАТЬ</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="vector"><h1 class="vectortext">|</h1></div>
+    <div class="slider" id="slider">
+      <div class="inventory1" id="sliderLine">
+        {% for j in range(25) %} {% for i in case %}
+        <div class="inventorys1" id="sliderImg">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3"></div>
+              <div class="card-body">
+                <div class="rarity">
+                  <h1 class="card-title pricing-card-title">?</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %} {% endfor %}
+      </div>
+    </div>
+    <script>
+      const slider = document.querySelector(".slider");
+      const sliderImages = document.querySelectorAll(".inventorys1");
+      const sliderLine = document.querySelector(".inventory1");
+      console.log(sliderImages);
+      let sliderCount = 0;
+      let sliderWidth = slider.offsetWidth;
+
+      function open() {
+        var inventory = document.querySelector(".inventory");
+        inventory.style.display = "flex";
+      }
+
+      function nextSlide() {
+        sliderCount++;
+        console.log(sliderCount);
+
+        if (sliderCount >= 100) {
+          sliderLine.style.transition = "all 15s";
+        }
+        if (sliderCount >= 120) {
+          sliderLine.style.transition = "all 25s";
+        }
+        if (sliderCount >= 140) {
+          sliderLine.style.transition = "all 35s";
+        }
+        if (sliderCount >= 180) {
+          sliderLine.style.transition = "all 80s";
+        }
+        if (sliderCount >= 190) {
+          sliderLine.style.transition = "all 130s";
+        }
+        if (sliderCount >= 200) {
+          sliderLine.style.transition = "all 300s";
+        }
+        if (sliderCount >= 221) {
+          sliderLine.style.transition = "all 500s";
+        }
+        if (sliderCount >= 227) {
+          clearInterval(interval);
+          sliderLine.style.transition = "all 1000000s";
+          open();
+        }
+
+        rollSlider();
+      }
+
+      function rollSlider() {
+        sliderLine.style.transform = `translateX(${-sliderCount * 300}px)`;
+      }
+      console.log(sliderCount);
+      const interval = setInterval(() => {
+        nextSlide();
+      }, 100);
+    </script>
+{% endblock %}

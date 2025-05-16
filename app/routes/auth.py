@@ -32,7 +32,7 @@ def register_user():
         db_session.commit()
     except SQLAlchemyError as e:
         db_session.rollback()
-        return f"Не удалось добавить нового пользователя в базу: {e}"
+        return "Не удалось добавить нового пользователя в базу"
     else:
         return redirect("/")
 

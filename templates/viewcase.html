@@ -1,22 +1,18 @@
-{% extends "reuse/base.html" %} {% block content %}
+{% extends "reuse/base.html" %}
+{% block content %}
 <div class="cont">
-  <div class="content">
-    <div
-      class="cover-container d-flex w-100 h-100 p-3 flex-wrap justify-content-center justify-content-lg-start"
-    >
-      <main class="px-3">
-        <h1 class="d-flex justify-content-center text-white">Кейс {{ n }}</h1>
-        <p class="lead d-flex justify-content-center text-white">
-          Cover is a one-page template for building simple and beautiful home
-          pages. Download, edit the text, and add your own fullscreen background
-          photo to make it your own.
+  <div class="content d-flex justify-content-center align-items-center h-100">
+    <div class="cover-container d-flex flex-column align-items-center">
+      <main class="px-3 text-center">
+        <h1 class="text-white">Кейс {{ name }}</h1>
+        <p class="lead text-white">
+          {{ description }}
         </p>
-        <p class="lead d-flex justify-content-center">
+        <p class="lead">
           <a
             href="/case{{n}}open"
             class="btn btn-lg btn-light fw-bold border-black bg-grey"
-            >ОТКРЫТЬ</a
-          >
+          >ОТКРЫТЬ</a>
         </p>
       </main>
     </div>

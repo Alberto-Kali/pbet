@@ -39,7 +39,7 @@
     <div class="col" data-rarity="{{ item[2]|lower }}">
       <div class="card h-100 rarity-{{ item[2]|lower }} animate__animated animate__fadeInUp">
         <div class="card-header">
-          <h5 class="my-0 fw-bold d-flex justify-content-between align-items-center">
+          <h5 class="my-0 text-white d-flex justify-content-between align-items-center">
             {{ item[0] }}
             <span class="badge rarity-badge">{{ item[2] }}</span>
           </h5>
@@ -47,15 +47,15 @@
         <div class="card-body d-flex flex-column">
           <div class="mb-3">
             <div class="item-image-placeholder bg-dark rounded-3 d-flex align-items-center justify-content-center mb-3" style="height: 120px;">
-              <i class="bi bi-box-seam fs-1 text-muted"></i>
+              <i class="bi bi-box-seam fs-1 text-white"></i>
             </div>
             <div class="d-flex justify-content-between mb-2">
-              <span class="text-muted">Цена:</span>
-              <span class="fw-bold">{{ item[1] }}</span>
+              <span class="text-white">Цена:</span>
+              <span class="text-white">{{ item[1] }}</span>
             </div>
             <div class="d-flex justify-content-between">
-              <span class="text-muted">Вес:</span>
-              <span class="fw-bold">{{ item[4] }}</span>
+              <span class="text-white">Вес:</span>
+              <span class="text-white">{{ item[4] }}</span>
             </div>
           </div>
         </div>

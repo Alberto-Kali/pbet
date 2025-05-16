@@ -210,8 +210,9 @@ def open_case(case_type, user, db_session, cost):
     db_session.commit()
     return vibor, case
 
-@cases_bp.route("/case<int:case_type>open", methods=["GET"])
+@cases_bp.route("/case<case_type>open", methods=["GET"])
 def case_open(case_type):
+    print(case_open)
     user_id = session.get("user_id")
     db_session = factory()
     user = db_session.get(User, user_id)
@@ -231,7 +232,7 @@ def case_open(case_type):
     }
     cost = cost_map.get(case_type, 50)
 
-    vibor, case = open_case(case_type, user, db_session, cost)
+    vibor, case = open_case(int(case_type), user, db_session, cost)
 
     # Store the selected item and case in session or other storage to pass to case view
     session['selected_item'] = {
@@ -259,7 +260,7 @@ def case_open(case_type):
 
 
 
-@cases_bp.route("/case<int:case_type>")
+@cases_bp.route("/case<case_type>")
 def case_view(case_type):
     user_id = session.get("user_id")
     db_session = factory()
@@ -269,9 +270,12 @@ def case_view(case_type):
     case_items = session.pop('case_items', None)
     user_balance = session.pop('user_balance', None)
     cost = session.pop('cost', None)
+    case_description = session.pop('description', None)
 
     return render_template("viewcase.html", user=user, n=case_type,
                            selected_item=selected_item,
                            case_items=case_items,
+                           name = case_type,
                            user_balance=user_balance,
-                           cost=cost)
+                           cost="",
+                           description = "ЗАЛУПАЗАЛУПАЗАЛУПА")
